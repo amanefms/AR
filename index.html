@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A-Frame で超簡単 AR</title>
+<title>Welcome to JBA!!</title>
 </head>
 <body style="margin:0px; overflow:hidden;">
   <!-- A-Frame ライブラリの読み込み -->
@@ -38,29 +38,30 @@
       <a-obj-model
         src="#desktop-obj"
 
-        scale="0.1 0.1 0.1"
-        position="0 0.5 0"
+        scale="0.03 0.03 0.03"
+        position="0 0.2 0"
       >
       </a-obj-model>
       <a-image
         src="#TrackingNow"
-        height="0.6"
-        position="0 1.1 0.15"
+        height="0.19"
+        width="0.3"
+        position="0 0.38 0.045"
       >
       </a-image>
 
       <a-obj-model
         src="#keyboard-obj"
-        scale="0.2 0.2 -0.2"
-        position="0 0.6 0.3"
+        scale="0.06 0.06 -0.06"
+        position="0 0.3 0.15"
         >
       </a-obj-model>
 
       <a-obj-model
         src="#JBA-obj"
         mtl="#JBA-mtl"
-        scale="0.6 0.6 0.6"
-        position="0 0.5 0"
+        scale="0.18 0.18 0.18"
+        position="0 0.2 0"
         animation="property:rotation; from:0 0 0; to:0 -360 0; dur:5000; easing:linear; loop:true;">
       </a-obj-model>
     </a-marker>
