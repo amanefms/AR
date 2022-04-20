@@ -27,14 +27,8 @@
       <a-asset-item id="JBA-mtl" src="model/JBA.mtl"></a-asset-item>   <!-- mtlファイル -->
     </a-assets>
  
-    <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-    <a-marker preset="hiro">
-      <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-      <a-box position="0 0.5 0" wireframe="true"></a-box>
-    </a-marker>
- 
-    <!-- マーカーを登録（プリセットされている「人」マーカー） -->
-    <a-marker type="pattern" url="image/pattern-TrackingQR.patt">
+    <!-- マーカーを登録 -->
+    <a-marker type="pattern" url="image/pattern-TrackingNow.patt">
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
       <a-entity 
         gltf-model="#Asus" 
