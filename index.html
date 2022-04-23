@@ -16,46 +16,45 @@
  
     <!-- OBJ形式のCGモデルの読み込み -->
     <a-assets>
-      <a-asset-item id="Asus" src="model/Asus/LG.glb"></a-asset-item>
+      <a-asset-item id="desktop-obj" src="model/Asus/Asus.obj"></a-asset-item>   <!-- objファイル -->
+      <a-asset-item id="desktop-mtl" src="model/Asus/Asus.mtl"></a-asset-item>   <!-- mtlファイル -->
       <img id="TrackingNow" src="image/TrackingNow.png">
       
-      <a-asset-item id="keyboard" src="model/keyboard.glb"></a-asset-item>
+      <a-asset-item id="keyboard-obj" src="model/keyboard.obj"></a-asset-item>   <!-- objファイル -->
 
-      <a-asset-item id="model" src="model/WelcomeToJBA.glb"></a-asset-item>
-
-      <a-asset-item id="JBA-obj" src="model/JBA.obj"></a-asset-item>   <!-- objファイル -->
-      <a-asset-item id="JBA-mtl" src="model/JBA.mtl"></a-asset-item>   <!-- mtlファイル -->
+      <a-asset-item id="JBA-obj" src="model/WelcomeToJBA.obj"></a-asset-item>   <!-- objファイル -->
+      <a-asset-item id="JBA-mtl" src="model/WelcomeToJBA.mtl"></a-asset-item>   <!-- mtlファイル -->
     </a-assets>
  
-    <!-- マーカーを登録 -->
-    <a-marker type="pattern" url="image/pattern-TrackingNow.patt">
+    <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
+    <a-marker preset="hiro">
+      <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
+      <a-box position="0 0.5 0" wireframe="true"></a-box>
+    </a-marker>
+ 
+    <!-- マーカーを登録（プリセットされている「人」マーカー） -->
+    <a-marker type="pattern" url="image/pattern-QR.patt">
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-entity 
-        gltf-model="#Asus" 
-        scale="1.5 1.5 1.5"
-        position="0 0.1 -0.5" 
-      ></a-entity>
+      <a-obj-model
+        src="#desktop-obj"
 
+        scale="0.1 0.1 0.1"
+        position="0 0.5 0"
+      >
+      </a-obj-model>
       <a-image
         src="#TrackingNow"
-        height="0.7"
-        width="1.2"
-        position="0.01 0.85 -0.06"
+        height="0.6"
+        position="0 1.1 0.15"
       >
       </a-image>
 
-      <a-entity 
-        gltf-model="#keyboard" 
-        scale="0.15 0.15 0.15"
-        position="0 0.1 0.35" 
-      ></a-entity>
-
-      <a-entity 
-        gltf-model="#model" 
-        scale="0.5 0.5 0.5"
-        position="0 0 0" 
-        animation="property: position; from: -2 1 -1.2; to: -2 1.2 -1.2; dur: 1000; easing: linear; loop: true"
-      ></a-entity>
+      <a-obj-model
+        src="#keyboard-obj"
+        scale="0.2 0.2 -0.2"
+        position="0 0.6 0.3"
+        >
+      </a-obj-model>
 
       <a-obj-model
         src="#JBA-obj"
